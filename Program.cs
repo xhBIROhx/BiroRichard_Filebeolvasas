@@ -22,6 +22,7 @@ namespace orai
 			FileMentes(karakterek);
 			LegjobbHarom(karakterek);
 			Legjobbak(karakterek);
+			Csata(karakterek);
 		}
 		static void Beolvasas(string filenev, List<Karakter> karakterek)
 		{
@@ -86,6 +87,25 @@ namespace orai
 		static List<Karakter> Legjobbak(List<Karakter> karakterek) {
 			var ret = karakterek.OrderByDescending(k => k.Ero+k.Szint).ToList();
 			return ret;
+		}
+
+		static void Csata(List<Karakter> karakterek) {
+			var team1 = karakterek[..(karakterek.Count/2)];
+			var team2 = karakterek[(karakterek.Count/2)..];
+
+			int team1STR = 0;
+			int team2STR = 0;
+			foreach (var item in team1) {
+				team1STR += item.Szint+item.Ero;
+			}
+			foreach (var item in team1) {
+				team2STR += item.Szint+item.Ero;
+			}
+			if (team1STR > team2STR) {
+				System.Console.WriteLine("első csapat nyert");
+			}else {
+				System.Console.WriteLine("második csapat nyert");
+			}
 		}
 	}
 }
