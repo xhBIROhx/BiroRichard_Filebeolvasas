@@ -16,6 +16,7 @@
 			Console.WriteLine(LegmagasabbEletero(karakterek));;
 			Console.WriteLine(AtlagSzint(karakterek));;
 			ErossegSzerint(karakterek);
+			var _ = MagasabbSzintu(karakterek, 3);
 		}
 		static void Beolvasas(string filenev, List<Karakter> karakterek)
 		{
@@ -60,6 +61,9 @@
                 Console.WriteLine(karakter);
             }
 		}
+		static List<Karakter> MagasabbSzintu(List<Karakter> karakterek, int szint) {
+            return karakterek.Where(k => k.Szint > szint).ToList();
+        }
 
 	}
 }
