@@ -1,4 +1,6 @@
-﻿namespace orai
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace orai
 {
 	internal class Program
 	{
@@ -16,8 +18,9 @@
 			Console.WriteLine(LegmagasabbEletero(karakterek));;
 			Console.WriteLine(AtlagSzint(karakterek));;
 			ErossegSzerint(karakterek);
-			var _ = MagasabbSzintu(karakterek, 3);
+			MagasabbSzintu(karakterek, 3);
 			FileMentes(karakterek);
+			LegjobbHarom(karakterek);
 		}
 		static void Beolvasas(string filenev, List<Karakter> karakterek)
 		{
@@ -72,6 +75,11 @@
 				sw.WriteLine(karakter);
 			}
 			sw.Close();
+		}
+	
+		static List<Karakter> LegjobbHarom(List<Karakter> karakterek) {
+			var ret = karakterek.OrderByDescending(k => k.Ero+k.Szint).ToList()[0..3];
+			return ret;
 		}
 	}
 }
