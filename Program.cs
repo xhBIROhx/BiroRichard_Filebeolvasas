@@ -10,8 +10,12 @@
 
 			foreach (var item in karakterek)
 			{
-				Console.WriteLine(item.ToString());
+				Console.WriteLine(item);
 			}
+
+			Console.WriteLine(LegmagasabbEletero(karakterek));;
+			Console.WriteLine(AtlagSzint(karakterek));;
+			ErossegSzerint(karakterek);
 		}
 		static void Beolvasas(string filenev, List<Karakter> karakterek)
 		{
@@ -28,6 +32,34 @@
 				karakterek.Add(karakter);
 			}
         }
+
+		static Karakter LegmagasabbEletero(List<Karakter> karakterek) {
+			Karakter ret = karakterek[0];
+			foreach (var karakter in karakterek) {
+				if (karakter.Eletero > ret.Eletero) {
+					ret = karakter;
+				}
+			}
+			return ret;
+		}
+
+		static float AtlagSzint(List<Karakter> karakterek) {
+			float ret = 0;
+			foreach (var karakter in karakterek) {
+				ret += karakter.Szint;
+			}
+			ret /= karakterek.Count;
+			return ret;
+		}
+
+		static void ErossegSzerint(List<Karakter> karakterek) {
+			var ret = karakterek.OrderByDescending(k => k.Ero);
+			Console.WriteLine("Karakterek erősség szerint rendezve:");
+            foreach (var karakter in ret)
+            {
+                Console.WriteLine(karakter);
+            }
+		}
 
 	}
 }

@@ -29,7 +29,8 @@ namespace orai
 		public override string? ToString()
 		{
 			return $"{name} - {szint} / {eletero} / {ero}";
-
 		}
+
+		
 	}
 }
