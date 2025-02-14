@@ -21,6 +21,7 @@ namespace orai
 			MagasabbSzintu(karakterek, 3);
 			FileMentes(karakterek);
 			LegjobbHarom(karakterek);
+			Legjobbak(karakterek);
 		}
 		static void Beolvasas(string filenev, List<Karakter> karakterek)
 		{
@@ -79,6 +80,11 @@ namespace orai
 	
 		static List<Karakter> LegjobbHarom(List<Karakter> karakterek) {
 			var ret = karakterek.OrderByDescending(k => k.Ero+k.Szint).ToList()[0..3];
+			return ret;
+		}
+
+		static List<Karakter> Legjobbak(List<Karakter> karakterek) {
+			var ret = karakterek.OrderByDescending(k => k.Ero+k.Szint).ToList();
 			return ret;
 		}
 	}
