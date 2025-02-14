@@ -31,6 +31,9 @@ namespace orai
 			return $"{name} - {szint} / {eletero} / {ero}";
 		}
 
-		
+		public bool ErossegeNagyobbMint(int ertek)
+        {
+            return Ero > ertek;
+        }
 	}
 }
