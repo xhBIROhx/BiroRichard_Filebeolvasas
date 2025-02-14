@@ -17,6 +17,7 @@
 			Console.WriteLine(AtlagSzint(karakterek));;
 			ErossegSzerint(karakterek);
 			var _ = MagasabbSzintu(karakterek, 3);
+			FileMentes(karakterek);
 		}
 		static void Beolvasas(string filenev, List<Karakter> karakterek)
 		{
@@ -65,5 +66,12 @@
             return karakterek.Where(k => k.Szint > szint).ToList();
         }
 
+		static void FileMentes(List<Karakter> karakterek) {
+			StreamWriter sw = new("karakterek.csv");
+			foreach (var karakter in karakterek) {
+				sw.WriteLine(karakter);
+			}
+			sw.Close();
+		}
 	}
 }
