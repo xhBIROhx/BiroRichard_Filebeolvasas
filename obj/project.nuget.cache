@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/sDkXGSzWOA=",
+  "success": true,
+  "projectFilePath": "/home/essuren/Desktop/School/c#/BiroRichard_Filebeolvasas/BiroRichard_Filebeolvasas.csproj",
+  "expectedPackageFiles": [
+    "/home/essuren/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.1/microsoft.aspnetcore.app.ref.9.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

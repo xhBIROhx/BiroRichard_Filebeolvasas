@@ -1,0 +1,30 @@
+Név;Szint;Életerő;Erő
+Geralt of Rivia;10;300;50
+Arthur Morgan;9;280;45
+Kratos;10;320;55
+Link;8;260;40
+Lara Croft;7;240;35
+Master Chief;10;350;60
+Ellie;6;200;30
+Aloy;8;270;42
+Nathan Drake;7;230;33
+Cloud Strife;9;290;48
+Samus Aran;8;260;43
+Ryu;9;280;46
+Sonic;7;220;32
+Mario;8;250;38
+Zelda;6;190;29
+Doom Slayer;10;340;58
+Sora;7;210;34
+John Wick;9;280;49
+Vivi Ornitier;6;210;27
+Ash Ketchum;5;180;25
+Tracer;8;240;40
+Geraldine;7;230;36
+Leon S. Kennedy;9;275;47
+Tifa Lockhart;8;255;41
+Gordon Freeman;8;265;44
+Solid Snake;10;330;53
+Ciri;9;300;50
+Chun-Li;7;220;37
+Kirby;6;200;30
